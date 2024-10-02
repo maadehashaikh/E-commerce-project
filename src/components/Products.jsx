@@ -61,3 +61,7 @@ export default Products
 
 
 // axious aik simple sa package h jo hm data fetching kay liyay use karty hain in React 
+
+//Loader ko kaisy lagana h 
+// loader ka component bany ga pehly 
+// loader.css mai ja kar loader ki css laga do loader.css mai usko .jsx ki file say link kardo and that's all 

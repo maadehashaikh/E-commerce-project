@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import CategoryPage from "./components/CategoryPage";
 import All_Navs from "./components/All_Navs";
+import Description from "./components/Description";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/category/:categoryName" element={<CategoryPage />} />
+        <Route path="/product/:productId" element={<Description />} />
       </Routes>
     </>
   );

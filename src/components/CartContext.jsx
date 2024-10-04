@@ -32,8 +32,15 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const checkout = () => {
+    setCartItems([]);
+    alert("Thank you for your purchase! Your order has been placed.");
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, checkout }}
+    >
       {children}
     </CartContext.Provider>
   );

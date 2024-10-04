@@ -42,8 +42,8 @@ const CategoryPage = () => {
               ? "All Products of Essential Hub"
               : `Products in ${categoryName}`}
           </h1>
-          <Link to={`/`}>
-            <h6>Back To Home </h6>
+          <Link to={`/`} className="no-underline">
+            <h6 className="text-yellow-400">Back To Home </h6>
           </Link>
 
           <p className="font-sans font-bold">

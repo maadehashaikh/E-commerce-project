@@ -7,17 +7,19 @@ import CategoryPage from "./components/CategoryPage";
 import All_Navs from "./components/All_Navs";
 import Description from "./components/Description";
 import Cart from "./components/Cart";
-
+import { CartProvider } from "./components/CartContext";
 function App() {
   return (
     <>
-      <All_Navs />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/category/:categoryName" element={<CategoryPage />} />
-        <Route path="/product/:productId" element={<Description />} />
-        <Route path="/cart" component={<Cart />} />
-      </Routes>
+      <CartProvider>
+        <All_Navs />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/category/:categoryName" element={<CategoryPage />} />
+          <Route path="/product/:productId" element={<Description />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </CartProvider>
     </>
   );
 }

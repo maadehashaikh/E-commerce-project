@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react"; //useContext
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Loader from "./Loader";
@@ -8,11 +8,17 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Carousel.css";
 import { Autoplay } from "swiper/modules";
+import { CartContext } from "./CartContext";
 
 const Description = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [loader, setLoader] = useState(false);
+  const { addToCart } = useContext(CartContext);
+
+  // const handleAddToCart = () => {
+  //   addToCart(product); // Add the current product to the cart
+  // };
 
   const fetchProductDetails = async () => {
     try {
@@ -122,11 +128,11 @@ const Description = () => {
               {product.reviews.map((review, index) => (
                 <SwiperSlide
                   key={index}
-                  className="bg-black p-2 border rounded text-white h-[30vh]"
+                  className="bg-black px-2 border rounded text-white h-[30vh]"
                 >
-                  <p className="">{review.comment} By </p>
+                  <p className="mt-3">{review.comment}</p>
                   <br />
-                  <p className="font-thin text-white">
+                  <p className="font-thin text-white mt-3">
                     {" ( " + review.reviewerName + " ) "}
                   </p>
                 </SwiperSlide>
@@ -136,8 +142,8 @@ const Description = () => {
         )}
 
         <button
-          // onClick={handleAddToCart}
-          className="mt-4 w-full text-sm py-3 text-black font-sans bg-white rounded-md border-2 border-black font-bold"
+          onClick={() => addToCart(product)}
+          className="mt-4 w-full text-sm py-1 text-black font-sans bg-white rounded-md border-2 border-black font-bold"
         >
           Add to Cart
         </button>

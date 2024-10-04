@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import CategoryPage from "./components/CategoryPage";
 import All_Navs from "./components/All_Navs";
 import Description from "./components/Description";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/product/:productId" element={<Description />} />
+        <Route path="/cart" component={<Cart />} />
       </Routes>
     </>
   );

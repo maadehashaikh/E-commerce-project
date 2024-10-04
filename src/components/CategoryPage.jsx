@@ -42,6 +42,10 @@ const CategoryPage = () => {
               ? "All Products of Essential Hub"
               : `Products in ${categoryName}`}
           </h1>
+          <Link to={`/`}>
+            <h6>Back To Home </h6>
+          </Link>
+
           <p className="font-sans font-bold">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
             fugiat natus quisquam maiores ab sapiente officiis voluptatibus quo
@@ -75,7 +79,7 @@ const CategoryPage = () => {
                 <button className="w-full text-sm py-3 text-black font-sans bg-yellow-400 rounded-md border-t-2 border-black font-bold">
                   <Link
                     to={`/product/${product.id}`}
-                    className="w-full h-full flex justify-center items-center"
+                    className="w-full h-full flex justify-center items-center no-underline"
                   >
                     Quick Shop
                   </Link>

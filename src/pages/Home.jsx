@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "../components/Carousel";
 import ProductsDisplay from "../components/ProductsDisplay";
 import ReviewsSlider from "../components/ReviewsSlider";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Home = () => {
       </p>
       <ProductsDisplay />
       <ReviewsSlider />
+      <Footer />
     </>
   );
 };

@@ -10,7 +10,7 @@ const ReviewsSlider = () => {
   return (
     <>
       <div className="flex justify-center items-center h-1/2">
-        <h2 className="bg-yellow-400 text-black rounded px-4 py-2 font-sans">
+        <h2 className="bg-transparent text-black rounded px-4 py-2 font-sans font-bold mb-3">
           Let's Customer Speak For Us
         </h2>
       </div>
@@ -28,7 +28,7 @@ const ReviewsSlider = () => {
         className="mySwiper"
       >
         <SwiperSlide
-          className="bg-black text-white p-4 font-sans py-2"
+          className="bg-black text-white p-4 font-sans py-2 w-1/2"
           style={{ fontSize: "13px" }}
         >
           <div className="h-32 w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 border-white">
@@ -46,9 +46,9 @@ const ReviewsSlider = () => {
             voluptatum expedita ut culpa neque, temporibus similique quis autem
             quas, debitis sed omnis.
             <br />
-            <span className="text-center w-full ml-60">
-              ["By Salman Akmal"]
-            </span>
+            <p className="text-center w-1/3 ml-60 bg-yellow-400 px-4 py-2 rounded">
+              Salman Akmal
+            </p>
           </div>
         </SwiperSlide>
 
@@ -71,9 +71,9 @@ const ReviewsSlider = () => {
             voluptatum expedita ut culpa neque, temporibus similique quis autem
             quas, debitis sed omnis.
             <br />
-            <span className="text-center w-full ml-60">
-              ["By Wajeha Nawaz"]
-            </span>
+            <p className="text-center w-1/3 ml-60 bg-yellow-400 px-4 py-2 rounded">
+              Wajeha Nawaz
+            </p>
           </div>
         </SwiperSlide>
 
@@ -96,7 +96,9 @@ const ReviewsSlider = () => {
             voluptatum expedita ut culpa neque, temporibus similique quis autem
             quas, debitis sed omnis.
             <br />
-            <span className="text-center w-full ml-60">["By Ali Nawaz"]</span>
+            <p className="text-center w-1/3 ml-60 bg-yellow-400 px-4 py-2 rounded">
+              Ali Nawaz
+            </p>
           </div>
         </SwiperSlide>
       </Swiper>
